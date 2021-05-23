@@ -1,6 +1,11 @@
+html {
+  width: 100%;
+}
 
 body {
   background: linear-gradient(#1c1c1c, #007282, #eeb28f);
+  min-height: 100vh;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;

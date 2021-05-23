@@ -11,8 +11,8 @@ const Iphone = ({sign}) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   let positionX;
 
-  if(scrollPosition > 84){
-    positionX = 84
+  if(scrollPosition > 300){
+    positionX = 300;
   } else {
     positionX = scrollPosition;
   }
@@ -33,7 +33,7 @@ const Iphone = ({sign}) => {
   }, []);
 
   return (
-    <group ref={group} dispose={null} rotation={[0, (positionX * sign) * Math.sin(1 / 26.9), 0]} position={[(positionX * sign) / 2 * Math.abs(Math.sin(1 / 10)) + 2.5 * sign, 0, 0]}>
+    <group ref={group} dispose={null} rotation={[0, (positionX * sign) * Math.sin(1 / 96), 0]} position={[(positionX * sign) / 2 * Math.abs(Math.sin(1 / 36)) + 2.5 * sign, 0, 0]}>
         <mesh {...nodes.Cube}>  
           <meshStandardMaterial
             map={texture}
