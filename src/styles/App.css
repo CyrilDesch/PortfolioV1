@@ -1,0 +1,11 @@
+.canvaContainer {
+ margin-top: 8vh;
+}
+
+.canvaContainer canvas {
+  height: 50vw !important;
+  max-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+

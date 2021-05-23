@@ -1,32 +1,40 @@
-import React, { useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import React, { useEffect, useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 import * as THREE from 'three';
 
 const texture = new THREE.TextureLoader().load("assets/iphone/iphoneTexture.jpg");
 texture.flipY = false;
 
-const Iphone = ({value, pos}) => {
+const Iphone = ({sign}) => {
   const group = useRef();
+  
+  const [scrollPosition, setScrollPosition] = useState(0);
+  let positionX;
 
-  if(value > 84){
-    value = 84
-  }
-  if(value < -84){
-    value = -84
-  }
-
-  if(group.current){
-    group.current.rotation.y = value * Math.sin(1 / 26.9)
-    group.current.position.x = value / 2 * Math.abs(Math.sin(1 / 10)) + pos
+  if(scrollPosition > 84){
+    positionX = 84
+  } else {
+    positionX = scrollPosition;
   }
 
   const { nodes } = useGLTF("assets/iphone/Iphone.glb");
 
+  useEffect(() => {
+
+    const handleScroll = () => {
+      const position = window.pageYOffset;
+      setScrollPosition(position);
+    }
+    window.addEventListener('scroll', handleScroll);
+
+    return(() => {
+      window.removeEventListener('scroll', handleScroll)
+    });
+  }, []);
+
   return (
-    <group ref={group} dispose={null} position={[pos,0,0]}>
-      <group scale={[1, 1, 1]}>
-        <mesh {...nodes.Cube} >  
+    <group ref={group} dispose={null} rotation={[0, (positionX * sign) * Math.sin(1 / 26.9), 0]} position={[(positionX * sign) / 2 * Math.abs(Math.sin(1 / 10)) + 2.5 * sign, 0, 0]}>
+        <mesh {...nodes.Cube}>  
           <meshStandardMaterial
             map={texture}
             attach="material"
@@ -34,7 +42,6 @@ const Iphone = ({value, pos}) => {
             metalness={0.1}
           />
         </mesh>
-      </group>
     </group>
   );
 }
