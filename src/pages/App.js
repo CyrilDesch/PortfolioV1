@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
-import Iphone from "./Components/Iphone";
+import Iphone from "../components/Iphone";
 
 const App = () => {
 
