@@ -11,8 +11,8 @@
 }
 
 .canvaContainer canvas {
-  height: 30vw !important;
-  max-height: 800px;
+  height: 40vw !important;
+  max-height: 450px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -45,16 +45,13 @@ a {
   font-size: 13px;
 }
 
-
-
 .animateText {
   text-align: center;
   margin-top: 20vw;
-  display: block;
   width: 100%;
   font-size: 40px;
-  position: relative;
   z-index: -1;
+  position: relative;
   white-space: nowrap;
-  font-weight: 100;
+  font-weight: 200;
 }

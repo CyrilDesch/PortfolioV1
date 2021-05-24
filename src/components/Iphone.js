@@ -20,7 +20,7 @@ const Iphone = ({sign, model}) => {
 
     const handleScroll = () => {
       const position = window.pageYOffset;
-      setScrollPosition(position);
+      setScrollPosition(position * Math.floor(window.screen.width/window.innerWidth));
     }
     window.addEventListener('scroll', handleScroll);
 
