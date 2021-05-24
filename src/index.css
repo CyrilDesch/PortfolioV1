@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: linear-gradient(#1c1c1c, #007282, #eeb28f);
+  background: linear-gradient(black, black, #007282, #eeb28f);
   min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
@@ -19,4 +19,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p, a, input, select, ul, li, label, span, form, div {
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: white;
 }
