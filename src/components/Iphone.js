@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useGLTF } from "@react-three/drei";
 
-const Iphone = ({sign, texture}) => {
+const Iphone = ({sign, model}) => {
 
   const group = useRef();
   
@@ -14,7 +14,7 @@ const Iphone = ({sign, texture}) => {
     positionX = scrollPosition;
   }
 
-  const { nodes } = useGLTF("assets/iphone/Iphone.glb");
+  const { nodes } = useGLTF("assets/iphone/Iphone_" + model + ".glb");
 
   useEffect(() => {
 
@@ -31,14 +31,7 @@ const Iphone = ({sign, texture}) => {
 
   return (
     <group ref={group} dispose={null} rotation={[0, (positionX * sign) * Math.sin(1 / 48), 0]} position={[(positionX * sign) / 2 * Math.abs(Math.sin(1 / 36)) + 2.5 * sign, 0, 0]}>
-        <mesh {...nodes.Cube}>  
-          <meshStandardMaterial
-            map={texture}
-            attach="material"
-            roughness={0.3}
-            metalness={0}
-          />
-        </mesh>
+        <mesh {...nodes.bake} />
     </group>
   );
 }

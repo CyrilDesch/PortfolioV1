@@ -3,23 +3,16 @@ import { Canvas } from "@react-three/fiber";
 import { Environment } from "@react-three/drei";
 import Iphone from "../components/Iphone";
 import '../styles/App.css';
-import * as THREE from 'three';
-
-const textureAndIos = new THREE.TextureLoader().load("assets/iphone/iphoneTextureAndIos.jpg");
-textureAndIos.flipY = false;
-
-const textureProfil = new THREE.TextureLoader().load("assets/iphone/iphoneTextureProfil.jpg");
-textureProfil.flipY = false;
 
 const App = () => {
   return (
     <>
       <div className="canvaContainer">
-        <Canvas camera={{position: [0, 0, 8]}}>
+        <Canvas camera={{position: [0, 0, 5]}}>
           <spotLight intensity={0.8} angle={1} penumbra={1} position={[0, 15, 10]} castShadow />
           <Suspense fallback={null}>
-            <Iphone sign={-1} texture={textureAndIos} />
-            <Iphone sign={1} texture={textureProfil} />
+            <Iphone sign={-1} model="android_apple" />
+            <Iphone sign={1} model="profil" />
             <Environment preset="city" />
           </Suspense>
         </Canvas>
