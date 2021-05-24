@@ -1,35 +1,21 @@
-.canvaContainer {
-  position: absolute;
-  margin-top: 15vh;
-  width: 100%;
-}
-
 .headerContainer {
+  background-color: rgba(0, 0, 0, 0.966);
   display: flex;
   justify-content: space-between;
-  margin: 2vw;
-}
-
-.canvaContainer canvas {
-  height: 40vw !important;
-  max-height: 450px;
+  padding: 1vw;
+  position: fixed;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  top: 0
 }
 
 .icon {
-  width: 100px;
+  width: 6vw;
   height: auto;
 }
 
 header div {
   align-items: center;
   justify-content: center;
-}
-
-.fakedivHeader {
-  width: 100px;
 }
 
 .menuContainer {
@@ -39,19 +25,105 @@ header div {
 }
 
 a {
-  margin-left: 30px;
-  margin-right: 30px;
-  font-weight: 100;
-  font-size: 13px;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  font-weight: 300;
+  font-size: 1vw;
+  width: 25%;
+  text-align: center;
 }
 
-.animateText {
-  text-align: center;
-  margin-top: 20vw;
-  width: 100%;
-  font-size: 40px;
-  z-index: -1;
-  position: relative;
-  white-space: nowrap;
-  font-weight: 200;
+a:hover {
+  font-weight: 500;
 }
+
+.coloredText {
+  color: #c6c601;
+}
+
+.menuContainer .coloredText {
+  font-weight: 500;
+}
+
+.rightContainer {
+  width: 10vw;
+}
+
+.contactContainer {
+  background-color: #c6c601;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9vw;
+  height: 3vw;
+  border-radius: 50%;
+}
+
+.contactText {
+  color: #c6c601;
+  text-align: center;
+  background-color: black;
+  width: 8.85vw;
+  line-height: 2.85vw;
+  border-radius: 50%;
+}
+
+.canvaContainer {
+  position: absolute;
+  top: 10vh;
+  width: 100%;
+  z-index: -1;
+}
+
+.canvaContainer canvas {
+  height: 40vw !important;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.animateText1 {
+  text-align: center;
+  margin-top: 22vw;
+  font-size: 3vw;
+  position: relative;
+  z-index: -2;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+
+.animateText2 {
+  transform: rotate(0.5turn) scaleX(-1);
+  text-align: center;
+  font-size: 2.8vw;
+  background: -webkit-linear-gradient(#eee, #eee, #c6c601, #333);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: -2;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+
+.citation {
+  text-align: center;
+  margin-top: 6vw;
+  font-size: 2vw;
+  white-space: nowrap;
+  font-weight: 400;
+  font-style: italic;
+  transition: all 0.5s;
+}
+
+.bar {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 15vh;
+  width: 25%;
+  height: 0;
+  border-bottom: solid rgb(206, 206, 206) 1px;
+}
+

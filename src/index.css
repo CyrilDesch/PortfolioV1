@@ -2,8 +2,21 @@ html {
   width: 100%;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c6c601;;
+}
+
 body {
-  background: linear-gradient(black, black, #007282, #eeb28f);
+  overflow: overlay;
+  background: linear-gradient(black, #212121, #007282, #eeb28f);
   min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
