@@ -31,10 +31,12 @@ a {
   font-size: 1vw;
   width: 25%;
   text-align: center;
+  transition: all 0.25s;
 }
 
 a:hover {
-  font-weight: 500;
+  color: #707000;
+  font-weight: 400;
 }
 
 .coloredText {
@@ -60,12 +62,25 @@ a:hover {
 }
 
 .contactText {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor:pointer;
   color: #c6c601;
   text-align: center;
   background-color: black;
   width: 8.85vw;
   line-height: 2.85vw;
   border-radius: 50%;
+  transition: all 0.25s;
+}
+
+.contactText:hover {
+  color: black;
+  background-color: #c6c601;
 }
 
 .canvaContainer {
