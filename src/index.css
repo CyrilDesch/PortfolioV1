@@ -11,12 +11,14 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #c6c601;;
+  background-color: #5b64db
+  ;
 }
 
 body {
+  --appcolor: #5b64db;
   overflow: overlay;
-  background: linear-gradient(black, #212121, #007282, #eeb28f);
+  background: linear-gradient(#09080e,#0d0d14,#4e7a71, #eeb28f);
   min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;

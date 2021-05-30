@@ -1,23 +1,19 @@
-import React, { Suspense, useState, useEffect } from "react";
-import { Canvas } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
-import Iphone from "../components/Iphone";
+import React, { useEffect } from "react";
 import '../styles/App.css';
-import Camera from "../components/Camera";
+import Planet from "../components/Planet";
+import CanvaIphone from "../components/CanvaIphone";
+import AppIcon from '../assets/AppIcon';
+import Arrow from '../assets/Arrow';
+import useScroll from "../hooks/useScroll";
+import automaticTitle from '../helpers/automaticTitle';
+import { Link } from "react-scroll";
+import IutIcon from "../assets/IutIcon";
 
 const App = () => {
-
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const scrollPosition = useScroll();
   useEffect(() => {
-    const handleScroll = () => {
-      const position = window.pageYOffset;
-      setScrollPosition(position * window.screen.width / window.innerWidth);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return(() => {
-      window.removeEventListener('scroll', handleScroll)
-    });
-  }, []);
+    automaticTitle(scrollPosition);
+  }, [scrollPosition]);
 
   let opacity;
   if (scrollPosition*scrollPosition*0.00003 > 1)
@@ -28,38 +24,103 @@ const App = () => {
   return (
     <>
       <header>
-          <div className="headerContainer">
-            <img className="icon" src="assets/icon2.png" alt="icon" />
-            <div className="menuContainer">
-              <a className="coloredText" href="#">Accueil</a>
-              <a href="#">SECTION 2</a>
-              <a href="#">SECTION 3</a>
-              <a href="#">SECTION 4</a>
+        <div className="headerContainer">
+          <div className="sideBarContainer">
+            <AppIcon className="icon" />
+          </div>
+          <div className="menuContainer">
+            <Link
+              className="accueil"
+              to="accueil"
+              smooth={true}
+              offset={-50}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={false}
+            >ACCUEIL</Link>
+            <Link
+              className="presentation"
+              to="presentation"
+              smooth={true}
+              offset={-0.05*window.innerWidth}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={false}
+            >PRESENTATION</Link>
+            <Link
+              className="projets"
+              to="projets"
+              smooth={true}
+              offset={-0.05*window.innerWidth}
+              duration={500}
+              isDynamic={true}
+              ignoreCancelEvents={false}
+            >PROJETS</Link>
+          </div>
+          <div className="sideBarContainer">
+            <Link
+                className="contactText"
+                to="contact"
+                smooth={true}
+                offset={-0.05*window.innerWidth}
+                duration={500}
+                isDynamic={true}
+                ignoreCancelEvents={false}
+              >Me contacter</Link>
+          </div>
+        </div>
+      </header>      
+      <main>
+        <span id="accueil"/>
+        <div className="canvaContainer">
+          <CanvaIphone scrollPosition={scrollPosition}/>
+        </div>
+        <Arrow className="arrow"/>
+        <span className="animateText1" style={{opacity: opacity}}>DEVELOPPEUR<br/><p className="coloredText">REACT NATIVE</p></span>
+        <span className="animateText2" style={{opacity: opacity/8}}>DEVELOPPEUR<br/><p className="coloredText">REACT NATIVE</p></span>
+        <Planet className="planet1" size={2} position={{x:10, y:10}} />
+        <Planet className="planet2" size={3.5} position={{x:80, y:30}} rotate={true} />
+        <p className="citation">Mon dicton:<br/><span className="coloredText">"Toujours avancer</span>, ne rien regretter"</p>
+        <p className="portfolio">CYRIL DESCHAMPS</p>
+        
+        <article>
+          <div id="presentation" className="delimitationContainer">
+            <div className="barContainer">
+              <span className="bar" />
+              <p>PRESENTATION</p>
+              <span className="bar" />
             </div>
-            <div className="rightContainer">
-              <div className="contactContainer">
-                <p className="contactText">Me contacter</p>
-              </div>
+            <p className="secondLine">A PROPOS DE MOI</p>
+          </div>
+          <div className="card">
+            <IutIcon className="IutIcon"/>
+            <span>
+              <p className="title">Je suis développeur React Native en parallèle de mes études à l'IUT Informatique Lyon 1.</p>
+              <p className="paragraphe">Je suis entrée par passion dans le monde du développement mobile depuis maintenant 3 ans, tout d’abord grâce à Java/Kotlin puis avec React Native. J’ai également acquis au fil du temps des compétences dans l’UX Design et dans la gestion d’un back. Mon cursus en IUT Informatique m’a également appris toutes les bonnes pratiques de développement ainsi que la mise en place de tests.</p>
+            </span>
+          </div>
+        </article>
+
+        <article>
+          <div id="projets" className="delimitationContainer">
+            <div className="barContainer">
+              <span className="bar" />
+              <p>MES PROJETS</p>
+              <span className="bar" />
             </div>
           </div>
-        </header>      
-        <main style={{height: `400vh`}}>
-          <div className="canvaContainer">
-            <Canvas>
-              <Camera position={[0, 0, 10]}/>
-              <spotLight intensity={0.8} angle={1} penumbra={1} position={[0, 15, 10]} castShadow />
-              <Suspense fallback={null}>
-                <Iphone sign={-1} model="android_apple" scrollPosition={scrollPosition} />
-                <Iphone sign={1} model="profil" scrollPosition={scrollPosition} />
-                <Environment preset="city" />
-              </Suspense>
-            </Canvas>
+        </article>
+        
+        <article>
+          <div id="contact" className="delimitationContainer">
+            <div className="barContainer">
+              <span className="bar" />
+              <p>CONTACT</p>
+              <span className="bar" />
+            </div>
           </div>
-          <p className="animateText1" style={{opacity: opacity}}>DEVELOPPEUR<br/><p className="coloredText">REACT NATIVE</p></p>
-          <p className="animateText2" style={{opacity: opacity/8}}>DEVELOPPEUR<br/><p className="coloredText">REACT NATIVE</p></p>
-          <p className="citation">"Toujours avancer, ne rien regretter"</p>
-          <span className="bar" />
-        </main>
+        </article>
+      </main>
     </>
   )
 }
