@@ -207,7 +207,7 @@ a {
 .portfolio {
   text-align: center;
   margin-top: 6vw;
-  font-size: 2vw;
+  font-size: 1.5vw;
   white-space: nowrap;
   font-style: italic;
   font-weight: 200;
@@ -229,7 +229,7 @@ a {
   justify-content: center;
 }
 
-.bar {
+.horizontalBar {
   display: inline-block;
   width: 5%;
   height: 0;
@@ -238,12 +238,12 @@ a {
 
 .barContainer p {
   display: inline-block;
-  font-size: 2vw;
+  font-size: 1.8vw;
   padding: 1vw;
 }
 
 .delimitationContainer > p {
-  font-size: 3vw;
+  font-size: 2.8vw;
   font-weight: 600;
 }
 
@@ -255,9 +255,9 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-top: 5vw;
-  width: 80%;
-  border-radius: 2vw;
-  background-color: rgb(233, 233, 233);
+  padding: 3vw;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.253),rgba(0, 0, 0, 0.185));
   display: flex;
   align-items: center;
 }
@@ -268,24 +268,31 @@ a {
   padding: 2vw;
 }
 
-.card span {
+.card .textContainer {
   padding: 3vw;
   display: block;
-  width: 70%;
+  width: 60%;
   word-wrap: break-word;
 }
 
 .card .title {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   font-weight: 600;
-  color: black;
+  color: rgb(189, 189, 189);
 }
 
 .card .paragraphe {
   margin-top: 1vw;
   font-size: 1vw;
-  font-weight: 400;
-  color: rgb(61, 61, 61);
+  font-weight: 300;
+  color: rgb(255, 255, 255);
   line-height: 2vw;
+}
+
+.verticalBar {
+  width: 0;
+  height: 10vw;
+  padding: 1vw;
+  border-right: solid var(--appcolor) 2px;
 }
 
