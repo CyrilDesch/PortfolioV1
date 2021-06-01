@@ -93,7 +93,7 @@ a {
   z-index: -1;
 }
 
-.canvaContainer canvas {
+.canvaContainer canvas, .canvaContainer Loader {
   height: 40vw !important;
   width: 100%;
   margin-left: auto;

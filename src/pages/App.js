@@ -8,9 +8,11 @@ import useScroll from "../hooks/useScroll";
 import automaticTitle from '../helpers/automaticTitle';
 import { Link } from "react-scroll";
 import IutIcon from "../assets/IutIcon";
+import WaitScreen from "../components/WaitScreen";
 
 const App = () => {
-  
+
+
   const scrollPosition = useScroll();
   useEffect(() => {
     automaticTitle(scrollPosition);
@@ -23,9 +25,9 @@ const App = () => {
     opacity = scrollPosition*scrollPosition*0.00003
 
   
-
   return (
     <>
+      <WaitScreen />
       <header>
         <div className="headerContainer">
           <div className="sideBarContainer">
