@@ -11,8 +11,8 @@ const WaitScreen = () => {
     return null
 
   if(progress === 100 && !hidden)
-    setTimeout(() => { setChangeOpacity(true) }, 500);
-    setTimeout(() => { setHidden(true) }, 1500);
+    setTimeout(() => { setChangeOpacity(true) }, 1000);
+    setTimeout(() => { setHidden(true) }, 2000);
 
   let opacity = 1
   if(changeOpacity)

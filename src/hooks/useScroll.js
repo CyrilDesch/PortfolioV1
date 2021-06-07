@@ -8,11 +8,11 @@ export default function useScroll() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", listener);
+    window.addEventListener("scroll", listener, { passive: true});
     return () => {
       window.removeEventListener("scroll", listener);
     };
-  });
+  }, []);
 
   return scrollY;
 }

@@ -1,7 +1,3 @@
-main {
-  height: 400vh;
-}
-
 #accueil {
   display: block;
   height: 1px;
@@ -9,6 +5,7 @@ main {
 
 .headerContainer {
   background-color: #09080e;
+  z-index: 10;
   display: flex;
   justify-content: space-between;
   padding: 0.8vw;
@@ -16,7 +13,8 @@ main {
   padding-left: 15vw;
   position: fixed;
   width: 100%;
-  top: 0
+  top: 0;
+  border-bottom: solid 0.5px #1a1729;
 }
 
 .icon {
@@ -35,7 +33,7 @@ header div {
   justify-content: center;
 }
 
-a {
+.menuContainer a {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -73,7 +71,7 @@ a {
   -ms-user-select: none;
   user-select: none;
   cursor:pointer;
-  color: var(--appcolor);
+  color: white;
   text-align: center;
   font-size: 1vw;
   line-height: 2.85vw;
@@ -82,7 +80,7 @@ a {
 }
 
 .contactText:hover {
-  color: black;
+  color: white;
   background-color: var(--appcolor);
 }
 
@@ -103,8 +101,8 @@ a {
 .animateText1 {
   display: block;
   text-align: center;
-  margin-top: 22vw;
-  font-size: 3vw;
+  margin-top: 24vw;
+  font-size: 2.6vw;
   position: relative;
   z-index: -2;
   font-weight: 700;
@@ -115,7 +113,7 @@ a {
   display: block;
   transform: rotate(0.5turn) scaleX(-1);
   text-align: center;
-  font-size: 2.8vw;
+  font-size: 2.4vw;
   background: -webkit-linear-gradient(#eee, #eee, var(--appcolor), #333);
   background-clip: text;
   -webkit-background-clip: text;
@@ -134,7 +132,7 @@ a {
   position: absolute;
   bottom: 0.5vw;
   left: 3vw;
-  width: 2vw;
+  width: 1.8vw;
   height: auto;
 }
 
@@ -153,19 +151,8 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: bounce2 ease infinite;
-  animation-delay: 1s;
-  animation-duration: 8s;
-}
-
-.planet2 {
-  z-index: -10;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   animation: bounce1 ease infinite;
-  animation-duration: 10s;
+  animation-duration: 6s;
 }
 
 .disque {
@@ -183,30 +170,33 @@ a {
 
 @keyframes bounce1 {
 	0%, 50%, 100% {transform: translateY(0);}
-	25% {transform: translateY(-40%);}
-	80% {transform: translateY(-10%);}
-}
-
-@keyframes bounce2 {
-	0%, 50%, 100% {transform: translateY(0);}
-	25% {transform: translateY(-30%);}
+	25% {transform: translateY(-50%);}
 	80% {transform: translateY(-10%);}
 }
 
 .citation {
   z-index: -100;
   position: absolute;
-  right: 2vw;
-  top: 10vw;
-  font-size: 1.2vw;
+  left: 0;
+  top: 14vw;
+  font-size: 1vw;
   white-space: nowrap;
   font-style: italic;
   transition: all 0.5s;
+  text-transform: uppercase;
+}
+
+.citationContenu {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 4.5vw;
+  line-height: 4vw;
 }
 
 .portfolio {
-  text-align: center;
-  margin-top: 6vw;
+  text-align: end;
+  margin-top: 8vw;
+  margin-right: 3vw;
   font-size: 1.5vw;
   white-space: nowrap;
   font-style: italic;
@@ -215,7 +205,7 @@ a {
 }
 
 .delimitationContainer {
-  margin-top: 10vw;
+  margin-top: 8vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -254,11 +244,12 @@ a {
 .card {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5vw;
+  margin-top: 3vw;
   padding: 3vw;
   width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.253),rgba(0, 0, 0, 0.185));
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -268,6 +259,12 @@ a {
   padding: 2vw;
 }
 
+.reactImage {
+  width: 20%;
+  height: auto;
+  box-shadow: 5px 5px var(--appcolor);
+}
+
 .card .textContainer {
   padding: 3vw;
   display: block;
@@ -275,13 +272,13 @@ a {
   word-wrap: break-word;
 }
 
-.card .title {
+.title {
   font-size: 1.2vw;
   font-weight: 600;
-  color: rgb(189, 189, 189);
+  color: var(--appcolor);
 }
 
-.card .paragraphe {
+.paragraphe {
   margin-top: 1vw;
   font-size: 1vw;
   font-weight: 300;
@@ -296,3 +293,82 @@ a {
   border-right: solid var(--appcolor) 2px;
 }
 
+.valeurCardList {
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.valeurCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.valeurCardContainer {
+  height: 15vw;
+  width: 40vw;
+  padding: 4vw;
+  background: linear-gradient(rgba(0, 0, 0, 0.219),rgba(0, 0, 0, 0.171));
+  position: relative;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.075);
+}
+
+.valeurCard .paragraphe {
+  line-height: 1.6vw;
+}
+
+.valeurCard .iconContainer {
+  background-color: rgba(0, 0, 0, 0.219);
+  border: 1px wheat solid;
+  border-radius: 5vw;
+  padding: 1.5vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconSucces {
+  width: 4vw;
+  height: auto;
+}
+
+.transition {
+  display: block;
+  height: 5vw;
+  border-left: 0.2vw dotted var(--appcolor);
+  margin-left: 24.9vw;
+  margin-right: 24.9vw;
+}
+
+.btn-si {
+  background-position: 1em;
+  background-repeat: no-repeat;
+  background-size: 2em;
+  border-radius: 0.5em;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0 2em 0 4em;
+  text-decoration: none;
+  transition: all 0.25s; 
+}
+
+.btn-github {
+  display: block;
+  margin-top: 1.5vw;
+  line-height: 3vw;
+  width: 13vw;
+  color: white;
+  background-color: var(--appcolor);
+  background-image: url("../assets/github.svg"); 
+}
+.btn-github:hover {
+  background-color: #444444; 
+}
