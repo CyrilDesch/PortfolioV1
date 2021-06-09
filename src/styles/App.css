@@ -378,13 +378,13 @@ header div {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 5vw;
+  padding: 8vw;
 }
 
 .projectContainer {
   background-color: rgba(0, 0, 0, 0.253);
   border-radius: 1vw;
-  width: 25vw;
+  width: 23vw;
   height: 35vw;
   margin-bottom: 5vw;
 }
@@ -397,16 +397,19 @@ header div {
 }
 
 .projectContainer .title {
-  padding: 1.5%;
-  
-  font-size: 3vw;
+  display: block;
+  padding: 2%;
+  margin-left: 2%;
+  font-size: 1.8vw;
   width: 97%;
   color: white;
 }
 
 .projectContainer .paragraphe {
-  padding: 1.5%;
-  font-size: 3vw;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding: 3%;
+  font-size: 1vw;
   width: 97%;
   color: white;
 }
