@@ -1,9 +1,9 @@
-const ProjectContainer = ({ src }) => {
+const ProjectContainer = ({ src, title, description }) => {
   return(
     <div className="projectContainer">
       <img className="image" src={src} alt="Projet" />
-      <p className="title">La maman de Mathis</p>
-      <p className="paragraphe">Très beau projet ! EIJZEOJZEddddddddddSQQSDQSDQSDQSDOISSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSR</p>
+      <p className="title">{title}</p>
+      <p className="paragraphe">{description}</p>
     </div>
   )
 }

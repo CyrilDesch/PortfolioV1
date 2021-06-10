@@ -39,7 +39,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    transition: 'opacity 500ms',
+    transition: 'opacity 1000ms',
   },
   text: {
     fontSize: '1.5vw',

@@ -1,6 +1,6 @@
-const AppIcon = ({ className }) => {
+const AppIcon = ({ className, onClick }) => {
   return(
-    <svg className={className} width="613pt" height="609pt" viewBox="0 0 613 609" preserveAspectRatio="xMidYMid meet">
+    <svg onClick={onClick} className={className} width="613pt" height="609pt" viewBox="0 0 613 609" preserveAspectRatio="xMidYMid meet">
       <g transform="translate(0,609) scale(0.1,-0.1)" fill="white" stroke="none">
         <path d="M0 3045 l0 -3045 3065 0 3065 0 0 3045 0 3045 -3065 0 -3065 0 0
         -3045z m5794 2693 c8 -30 8 -5372 0 -5392 -6 -15 -255 -16 -2729 -16 -2474 0

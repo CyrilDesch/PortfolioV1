@@ -20,6 +20,7 @@
 .icon {
   width: 3vw;
   height: auto;
+  cursor: pointer;
 }
 
 header div {
@@ -269,21 +270,23 @@ header div {
   padding: 3vw;
   display: block;
   width: 60%;
-  word-wrap: break-word;
 }
 
 .title {
   font-size: 1.2vw;
   font-weight: 600;
   color: var(--appcolor);
+  word-wrap: break-word;
 }
 
 .paragraphe {
   margin-top: 1vw;
+  margin-bottom: 1.5vw;
   font-size: 1vw;
   font-weight: 300;
   color: rgb(255, 255, 255);
   line-height: 2vw;
+  word-wrap: break-word;
 }
 
 .verticalBar {
@@ -354,31 +357,29 @@ header div {
   border: none;
   color: white;
   cursor: pointer;
-  font-size: 1em;
-  padding: 0 2em 0 4em;
+  font-size: 1vw;
+  padding: 0 2vw 0 3.8vw;
   text-decoration: none;
   transition: all 0.25s; 
+  display: block;
+  line-height: 3vw;
+  width: 12vw;
+  color: white;
+  background-color: var(--appcolor);
 }
 
 .btn-github {
-  display: block;
-  margin-top: 1.5vw;
-  line-height: 3vw;
-  width: 13vw;
-  color: white;
-  background-color: var(--appcolor);
   background-image: url("../assets/github.svg"); 
 }
-.btn-github:hover {
+.btn-si:hover {
   background-color: #444444; 
 }
 
 .projectsContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
-  padding: 8vw;
+  padding: 2vw 0 6vw 0;
 }
 
 .projectContainer {
@@ -386,7 +387,8 @@ header div {
   border-radius: 1vw;
   width: 23vw;
   height: 35vw;
-  margin-bottom: 5vw;
+  margin-top: 4vw;
+  margin-left: 7.75vw;
 }
 
 .projectContainer .image {
@@ -413,3 +415,51 @@ header div {
   width: 97%;
   color: white;
 }
+
+footer .horizontalBar {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  width: 86%;
+  border-width: 0.5px;
+}
+
+.footerBar {
+  border-top: 0.1vw solid white;
+  padding: 1vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #0e0c18;
+  width: 100vw;
+  height: 5vw;
+}
+
+.footerBar p {
+  font-size: 1vw;
+}
+
+.footerBar .icon {
+  width: 2vw;
+}
+
+.footerBar .barTitle {
+  font-weight: 200;
+  user-select: none;
+}
+
+.footerBar .btn-si {
+  width: 9vw;
+  background-color: rgba(83, 83, 83, 0.411);
+}
+
+.footerBar .btn-si:hover {
+  background-color: #444444; 
+}
+
+.btn-linkedin {
+  background-image: url("../assets/linkedin.svg"); 
+}
+
+
