@@ -1,7 +1,7 @@
 const tabProject = [
   {
     title: "Portfolio",
-    description: "Il s'agit du site sur lequel vous vous trouvez. Ce site a pour but de me présenter rapidement moi et mes projets. Celui-ci a été développé avec React JS pour continuer à améliorer mon bagage technique. Mon objectif, durant ce projet, était d'apprendre à animer, de la meilleure des façons, plusieurs types de composants.",
+    description: "Il s'agit du site sur lequel vous vous trouvez. Ce site a pour but de me présenter rapidement moi ainsi que mes projets. Celui-ci a été développé avec React JS pour continuer à améliorer mon bagage technique. Mon objectif, durant ce projet, était d'apprendre à animer, de la meilleure des façons, plusieurs types de composants.",
     image: "./assets/portfolio.png",
     typeProject: "site",
   }, 

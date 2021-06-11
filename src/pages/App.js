@@ -89,32 +89,32 @@ const App = () => {
           <CanvaIphone scrollPosition={scrollPosition}/>
         </div>
         <Arrow className="arrow"/>
-        <span className="animateText1" style={{opacity: opacity}}>DEVELOPPEUR<br/><p className="coloredText">REACT - NATIVE</p></span>
-        <span className="animateText2" style={{opacity: opacity/8}}>DEVELOPPEUR<br/><p className="coloredText">REACT - NATIVE</p></span>
+        <span className="animateText1" style={{opacity: opacity}}>DÉVELOPPEUR<br/><p className="coloredText">REACT - NATIVE</p></span>
+        <span className="animateText2" style={{opacity: opacity/8}}>DÉVELOPPEUR<br/><p className="coloredText">REACT - NATIVE</p></span>
         <Planet className="planet1" size={4} position={{x:85, y:20}} rotate={true} />
-        <p className="citation">&nbsp;&nbsp;&nbsp;Mon dicton:<br/><span className="citationContenu"><span className="coloredText">Toujours<br/>avancer</span>,<br/>ne rien<br/>regretter</span></p>
+        <p className="citation">&nbsp;&nbsp;&nbsp;Mon dicton :<br/><span className="citationContenu"><span className="coloredText">Toujours<br/>avancer</span>,<br/>ne rien<br/>regretter</span></p>
         <p className="portfolio">CYRIL DESCHAMPS</p>
         
         <article>
           <div id="presentation" className="delimitationContainer">
             <div className="barContainer">
               <span className="horizontalBar" />
-              <p>PRESENTATION</p>
+              <p>PRÉSENTATION</p>
               <span className="horizontalBar" />
             </div>
-            <p className="secondLine">A PROPOS DE MOI</p>
+            <p className="secondLine">À PROPOS DE MOI</p>
           </div>
           <div className="card">
             <IutIcon className="IutIcon"/>
             <span className="verticalBar"></span>
             <span className="textContainer"> 
-              <p className="title">Je suis développeur React spécialisé React Native en parallèle de mes études en DUT Informatique</p>
+              <p className="title">Je suis développeur React spécialisé React Native en parallèle de mes études pour obtenir mon DUT Informatique</p>
               <p className="paragraphe">Vous avez besoin de développer votre projet rapidement ? Je vous mettrai à disposition mes compétences de développeur avec 3 ans d'expérience dans le développement mobile.</p>
             </span>
           </div>
           <div className="valeurCardList">
             <ValeurCard
-              title="Mon optimiste, mon ambition et mon goût de la réussite" 
+              title="Mon optimisme, mon ambition et mon goût de la réussite" 
               paragraphe="Peu importe votre idée et la quantité de travail demandée, c’est avec toute ma bonne volonté que je vous aiderai et vous conseillerai pour mener à bien vos projets." 
               presetIcon="succes"
               childNb={1}
@@ -127,13 +127,13 @@ const App = () => {
             />
             <ValeurCard 
               title="L'amour de la découverte" 
-              paragraphe="Ayant toujours été très débrouillard, j’ai appris de nombreuses choses seul et je suis finalement devenu autodidacte. Je ressens le besoin de comprendre tout ce qui m’entoure pour évoluer."
+              paragraphe="Ayant toujours été très débrouillard, j’ai appris de nombreuses choses seul et je suis finalement autodidacte. Je ressens le besoin de comprendre tout ce qui m’entoure pour évoluer."
               presetIcon="decouverte"
               childNb={3}
             />
             <ValeurCard 
               title="Ne pas se précipiter !" 
-              paragraphe="Je donne beaucoup d'importance à la communication dans un projet, surtout entre les différentes branches de métier. Je ferai mon maximum pour cerner totalement le besoin de votre application et répondre à vos demandes." 
+              paragraphe="Je donne beaucoup d'importance à la communication dans un projet, surtout entre les différentes branches de métiers. Je ferai mon maximum pour cerner totalement le besoin de votre application et répondre à vos demandes." 
               presetIcon="communication"
               childNb={4}
             />
@@ -151,7 +151,7 @@ const App = () => {
           <div className="card">
             <img src="./assets/react_image.png" alt="react_img" className="reactImage"/>
             <span className="textContainer"> 
-              <p className="title">EXPOSITION DE MES REALISATIONS</p>
+              <p className="title">EXPOSITION DE MES RÉALISATIONS</p>
               <p className="paragraphe">Voici les différents projets sur lesquels j'ai pu travailler.</p>
               <a href="https://github.com/CyrilDesch" target="_blank" class="btn-si btn-github" rel="noreferrer" >Mon GitHub</a>
             </span>
@@ -184,11 +184,11 @@ const App = () => {
       </main>
       <footer id="contact">
         <div className="footerBar">
-          <p><span className="barTitle">EMAIL: </span>cyril.deschamps@outlook.fr</p>
+          <p><span className="barTitle">EMAIL : </span>cyril.deschamps@outlook.fr</p>
           <a href="https://github.com/CyrilDesch" target="_blank" class="btn-si btn-github" rel="noreferrer" >GitHub</a>
           <AppIcon className="icon"  onClick={() => animateScroll.scrollToTop()} />
           <a href="https://www.linkedin.com/in/cyril-deschamps-7377681b7/" target="_blank" class="btn-si btn-linkedin" rel="noreferrer" >Linkedin</a>
-          <p><span className="barTitle">TELEPHONE: </span>06 42 90 88 40</p>
+          <p><span className="barTitle">TELEPHONE : </span>06 42 90 88 40</p>
         </div>
       </footer>
     </>
