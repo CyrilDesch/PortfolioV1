@@ -382,6 +382,25 @@ header div {
   padding: 2vw 0 6vw 0;
 }
 
+.projectsContainer .backgroundProject {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -100;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.projectsContainer .backgroundClickedProject {
+  z-index: 200;
+  background-color: rgba(9, 8, 14, 0.74);
+}
+
 .projectContainer {
   background-color: rgba(0, 0, 0, 0.253);
   border-radius: 1vw;
@@ -389,31 +408,82 @@ header div {
   height: 35vw;
   margin-top: 4vw;
   margin-left: 7.75vw;
+  cursor: pointer;
+  box-shadow: #00000013 0.5vw 0.5vw;
 }
 
 .projectContainer .image {
   border-radius: 1vw 1vw 0 0;
   object-fit: cover;
   width: 100%;
-  height: 40%;
+  height: 70%;
+  border: 0.05vw solid rgb(58, 58, 58);
+}
+
+.app .image {
+  object-position: 0 -1.5vw;
+  height: 70%;
+}
+
+.site .image {
+  height: 30%;
 }
 
 .projectContainer .title {
   display: block;
   padding: 2%;
-  margin-left: 2%;
+  margin-left: 8%;
   font-size: 1.8vw;
   width: 97%;
-  color: white;
+  height: 9%;
+  color: var(--appcolor);
 }
 
 .projectContainer .paragraphe {
   overflow-wrap: break-word;
   margin: 0;
-  padding: 3%;
-  font-size: 1vw;
+  padding-right: 5%;
+  padding-left: 5%;
+  font-size: 0.85vw;
+  overflow-y: hidden;
   width: 97%;
-  color: white;
+  text-align: justify;
+  color: rgb(199, 199, 199);
+}
+
+.app .paragraphe {
+  height: 10.5%;
+}
+
+.site .paragraphe {
+  height: 50.5%;
+}
+
+.projectContainer .iconPlus {
+  width: 3.5vw;
+  margin-left: 82%;
+  padding: 1vw;
+}
+
+.backgroundProject div {
+  border-radius: 2vw;
+  background-color: rgb(38, 30, 66);
+  width: 30vw;
+}
+
+.backgroundProject .title {
+  text-align: center;
+  padding-top: 2vw;
+  font-size: 2vw;
+}
+
+.backgroundProject .description {
+  text-align: justify;
+  padding: 2vw;
+  padding-top: 1vw;
+  font-size: 1vw;
+  font-weight: 200;
+  line-height: 1.7vw;
 }
 
 footer .horizontalBar {
