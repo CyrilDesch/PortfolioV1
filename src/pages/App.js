@@ -121,13 +121,13 @@ const App = () => {
             />
             <ValeurCard 
               title="Je suis passionné" 
-              paragraphe="La création informatique est ma passion. La possibilité de créer n'importe quel projet, seul ou à plusieurs, m’a permis de m’épanouir." 
+              paragraphe="La création informatique est ma passion. Le fait de pouvoir créer n'importe quel projet, seul ou à plusieurs, m’a permis de m’épanouir." 
               presetIcon="passion"
               childNb={2}
             />
             <ValeurCard 
               title="L'amour de la découverte" 
-              paragraphe="Ayant toujours été très débrouillard, j’ai appris de nombreuses choses seul et j’ai notamment 'appris à apprendre'. Je ressens le besoin de comprendre tout ce qui m’entoure pour évoluer."
+              paragraphe="Ayant toujours été très débrouillard, j’ai appris de nombreuses choses seul et je suis finalement devenu autodidacte. Je ressens le besoin de comprendre tout ce qui m’entoure pour évoluer."
               presetIcon="decouverte"
               childNb={3}
             />
