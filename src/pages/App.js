@@ -108,32 +108,32 @@ const App = () => {
             <IutIcon className="IutIcon"/>
             <span className="verticalBar"></span>
             <span className="textContainer"> 
-              <p className="title">Je suis développeur React spécialisé React Native en parallèle de mes études à l'IUT Informatique Lyon 1.</p>
-              <p className="paragraphe">Vous avez besoin de développer votre projet rapidement ? Je vous mettrais à disposition mes compétences de développeur avec 3 ans d'expérience dans le développement mobile.</p>
+              <p className="title">Je suis développeur React spécialisé React Native en parallèle de mes études en DUT Informatique</p>
+              <p className="paragraphe">Vous avez besoin de développer votre projet rapidement ? Je vous mettrai à disposition mes compétences de développeur avec 3 ans d'expérience dans le développement mobile.</p>
             </span>
           </div>
           <div className="valeurCardList">
             <ValeurCard
               title="Mon optimiste, mon ambition et mon goût de la réussite" 
-              paragraphe="Peu importe votre idée et la quantité de travail, c’est avec toute ma bonne volonté que je vous aiderais et vous conseillerais pour mener au succès vos projets." 
+              paragraphe="Peu importe votre idée et la quantité de travail demandée, c’est avec toute ma bonne volonté que je vous aiderai et vous conseillerai pour mener à bien vos projets." 
               presetIcon="succes"
               childNb={1}
             />
             <ValeurCard 
               title="Je suis passionné" 
-              paragraphe="La création informatique est ma passion. La possibilité de créer tout ce que l’on veut, seul ou à plusieurs, m’a permis de m’épanouir." 
+              paragraphe="La création informatique est ma passion. La possibilité de créer n'importe quel projet, seul ou à plusieurs, m’a permis de m’épanouir." 
               presetIcon="passion"
               childNb={2}
             />
             <ValeurCard 
               title="L'amour de la découverte" 
-              paragraphe="Ayant toujours été très débrouillard, j’ai appris beaucoup de choses seul et j’ai notamment 'appris à apprendre'. Je ressens le besoin de comprendre tout ce qui m’entoure pour évoluer." 
+              paragraphe="Ayant toujours été très débrouillard, j’ai appris de nombreuses choses seul et j’ai notamment 'appris à apprendre'. Je ressens le besoin de comprendre tout ce qui m’entoure pour évoluer."
               presetIcon="decouverte"
               childNb={3}
             />
             <ValeurCard 
               title="Ne pas se précipiter !" 
-              paragraphe="Je donne beaucoup d'importance à la communication dans un projet, surtout entre les différentes branches de métier. Je ferais mon maximum pour cerner totalement le besoin de votre application et répondre à vos demandes." 
+              paragraphe="Je donne beaucoup d'importance à la communication dans un projet, surtout entre les différentes branches de métier. Je ferai mon maximum pour cerner totalement le besoin de votre application et répondre à vos demandes." 
               presetIcon="communication"
               childNb={4}
             />
